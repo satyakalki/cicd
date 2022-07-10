@@ -1,6 +1,6 @@
 node{
 
-   def tomcatWeb = '/var/lib/jenkins/think/'
+   def tomcatWeb = '/var/lib/think/apache-tomcat-10.0.22/webapps/'
    def tomcatBin = '/home/ec2-user/jenkins/apache-tomcat-10.0.22/bin'
    def tomcatStatus = ''
    stage('SCM Checkout'){
