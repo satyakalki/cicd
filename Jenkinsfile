@@ -22,7 +22,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "sudo cp /var/lib/jenkins/workspace/new1/target/JenkinsPipeline.war ${tomcatWeb}"
+     sh "cp /var/lib/jenkins/workspace/new1/target/JenkinsPipeline.war ${tomcatWeb}"
    }
       stage ('Start Tomcat Server') {
          sleep 5 
