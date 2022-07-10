@@ -1,7 +1,7 @@
 node{
 
    def tomcatWeb = '/var/lib/jenkins/think/apache-tomcat-10.0.22/webapps/'
-   def tomcatBin = /var/lib/jenkins/think/apache-tomcat-10.0.22/bin/'
+   def tomcatBin = '/var/lib/jenkins/think/apache-tomcat-10.0.22/bin/'
    def tomcatStatus = ''
    stage('SCM Checkout'){
      git 'https://github.com/satyakalki/cicd.git'
