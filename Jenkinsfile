@@ -1,6 +1,6 @@
 node{
 
-   def tomcatWeb = 'home/ec2-user/jenkins/apache-tomcat-10.0.22/webapps'
+   def tomcatWeb = '/jenkins/apache-tomcat-10.0.22/webapps/'
    def tomcatBin = 'home/ec2-user/jenkins/apache-tomcat-10.0.22/bin'
    def tomcatStatus = ''
    stage('SCM Checkout'){
@@ -22,7 +22,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "cp -r /var/lib/jenkins/workspace/new1/target/JenkinsPipeline.war ${tomcatWeb}/"
+     sh "cp -r /target/JenkinsPipeline.war ${tomcatWeb}"
    }
       stage ('Start Tomcat Server') {
          sleep 5 
