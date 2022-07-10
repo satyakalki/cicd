@@ -7,7 +7,7 @@ node{
      git 'https://github.com/satyakalki/cicd.git'
    }
    stage('Compile-Package-create-war-file'){ 
-     sh "mvn package"
+     sh "mvn clean package"
       }
 /*   stage ('Stop Tomcat Server') {
             sh ''' @Echo off
@@ -22,7 +22,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "cp /target/JenkinsPipeline.war ${tomcatWeb}/"
+     sh "cp /var/lib/jenkins/workspace/new1//target/JenkinsPipeline.war ${tomcatWeb}/"
    }
       stage ('Start Tomcat Server') {
          sleep 5 
